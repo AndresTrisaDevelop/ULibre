@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Andrés Triana — Contact Slide</title>
+<style>
+  :root{
+    --blue-700: #0A66C2;     /* LinkedIn-style blue */
+    --blue-500: #2B83E6;
+    --gray-900: #111827;
+    --gray-600: #6B7280;
+    --bg: #F3F4F6;
+    --card: #ffffff;
+    --maxw: 1200px;
+    --pad: 36px;
+  }
+
+  html,body{
+    height:100%;
+    margin:0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+                 Roboto, "Helvetica Neue", Arial;
+    background: linear-gradient(180deg, var(--bg) 0%, #eef2f6 100%);
+    color: var(--gray-900);
+  }
+
+  .stage{
+    min-height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 48px 24px;
+    box-sizing:border-box;
+  }
+
+  .card{
+    width:100%;
+    max-width:var(--maxw);
+    background:var(--card);
+    border-radius:16px;
+    box-shadow: 0 8px 30px rgba(16,24,40,0.08);
+    display:flex;
+    gap:48px;
+    align-items:center;
+    padding: clamp(28px, 3.5vw, 48px);
+    box-sizing:border-box;
+  }
+
+  /* Left column: big name + role */
+  .left{
+    flex: 1 1 60%;
+    min-width: 320px;
+  }
+
+  .name{
+    font-size: clamp(32px, 4.2vw, 48px);
+    font-weight: 700;
+    color: var(--gray-900);
+    margin:0 0 6px 0;
+    letter-spacing: -0.01em;
+  }
+
+  .title{
+    font-size: clamp(16px, 1.6vw, 18px);
+    color: var(--gray-600);
+    margin:0 0 18px 0;
+  }
+
+  .pill{
+    display:inline-block;
+    padding:8px 12px;
+    border-radius:999px;
+    background:linear-gradient(90deg, rgba(10,102,194,0.12), rgba(43,131,230,0.06));
+    color:var(--blue-700);
+    font-weight:600;
+    font-size:13px;
+    margin-bottom:8px;
+  }
+
+  .snap{
+    display:flex;
+    gap:28px;
+    margin-top: 18px;
+    align-items:flex-start;
+    flex-wrap:wrap;
+  }
+
+  .snap .col{
+    min-width:160px;
+  }
+
+  .snap .label{
+    display:block;
+    font-size:12px;
+    color:var(--gray-600);
+    margin-bottom:6px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+  }
+
+  .snap .value{
+    font-size:15px;
+    color:var(--gray-900);
+    font-weight:600;
+  }
+
+  /* Right column: contact card */
+  .right{
+    width: 360px;
+    min-width: 260px;
+    background: linear-gradient(180deg, #ffffff, #fbfdff);
+    border-radius:12px;
+    padding:18px;
+    box-sizing:border-box;
+    border:1px solid rgba(15,23,42,0.03);
+  }
+
+  .contact-row{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin:12px 0;
+  }
+
+  .icon{
+    width:44px;
+    height:44px;
+    border-radius:10px;
+    display:inline-grid;
+    place-items:center;
+    background: linear-gradient(180deg, rgba(10,102,194,0.08), rgba(43,131,230,0.03));
+    color:var(--blue-700);
+    flex-shrink:0;
+  }
+
+  .contact-info{
+    display:flex;
+    flex-direction:column;
+  }
+
+  .contact-info a{
+    color:var(--gray-900);
+    text-decoration:none;
+    font-weight:700;
+  }
+  .contact-info .small{
+    font-size:13px;
+    color:var(--gray-600);
+    font-weight:600;
+  }
+
+  .qr-container{
+    margin-top:18px;
+    display:flex;
+    gap:12px;
+    justify-content:space-around;
+    text-align:center;
+  }
+
+  .qr-code{
+    font-size:12px;
+    font-weight:600;
+    color: var(--gray-600);
+  }
+
+  /* Footer: small notes */
+  .footer{
+    margin-top:18px;
+    font-size:13px;
+    color:var(--gray-600);
+    border-top:1px dashed rgba(99,102,241,0.04);
+    padding-top:12px;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width:880px){
+    .card{flex-direction:column; align-items:stretch;}
+    .right{width:100%;}
+  }
+
+  /* Fullscreen / print friendly */
+  @media print{
+    body{background:#fff;}
+    .stage{padding:0;}
+    .card{box-shadow:none;border-radius:0;}
+  }
+</style>
+</head>
+<body>
+  <div class="stage" role="main" aria-label="Contact slide">
+    <article class="card">
+      <section class="left" aria-label="Main info">
+        <div class="pill">Product & Data Strategy • BI • Predictive Modeling</div>
+        <h1 class="name">Andrés Mauricio Triana Sánchez</h1>
+        <p class="title">Business Analyst — AI-driven SaaS | Data Visualization | Predictive Analytics</p>
+
+        <div class="snap" aria-hidden="false">
+          <div class="col">
+            <span class="label">Location</span>
+            <span class="value">Cali, Valle del Cauca, Colombia</span>
+          </div>
+
+          <div class="col">
+            <span class="label">Current</span>
+            <span class="value">Business Analyst @ Avanto</span>
+          </div>
+
+          <div class="col">
+            <span class="label">Education</span>
+            <span class="value">MEng Big Data and Analytics (UNIR) • BEng Industrial Engineering</span>
+          </div>
+        </div>
+
+        <div class="footer">
+          Quick snapshot — available for networking, collaborations, and consulting.
+        </div>
+      </section>
+
+      <aside class="right" aria-label="Contact information">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <strong style="font-size:15px;color:var(--gray-900)">Contact</strong>
+          <small style="font-size:12px;color:var(--gray-600)">Detailed info</small>
+        </div>
+
+        <div class="contact-row" style="margin-top:12px">
+          <div class="icon" aria-hidden="true">
+            <!-- mail icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 7.5v9A2.5 2.5 0 0 0 5.5 19h13A2.5 2.5 0 0 0 21 16.5v-9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 7.5L12 13 3 7.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="contact-info">
+            <a href="mailto:andresm3000@gmail.com">andresm3000@gmail.com</a>
+            <span class="small">Email</span>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <div class="icon" aria-hidden="true">
+            <!-- LinkedIn icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 7.5A1.5 1.5 0 1 1 4 4.5a1.5 1.5 0 0 1 0 3z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 9h2v8H3zM9 9h2v1.2a3.2 3.2 0 0 1 6.4 0V17h-2v-6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="contact-info">
+            <a href="https://www.linkedin.com/in/andrestriana000" target="_blank" rel="noopener">linkedin.com/in/andrestriana000</a>
+            <span class="small">LinkedIn</span>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <div class="icon" aria-hidden="true">
+            <!-- phone icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M18.857 17.93C17.476 19.31 15.167 18.81 12.619 16.262C10.071 13.714 9.571 11.405 10.952 10.024L11.762 9.214C12.452 8.524 12.452 7.357 11.762 6.667L9.429 4.333C8.738 3.643 7.571 3.643 6.881 4.333L5.048 6.167C3.571 7.643 4.167 10.429 6.881 13.143C9.595 15.857 12.381 16.452 13.857 14.976L15.69 13.143C16.381 12.452 16.381 11.286 15.69 10.595L13.357 8.262C12.667 7.571 11.5 7.571 10.81 8.262L10.024 9.048" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" transform="rotate(10 12 12)"/>
+            </svg>
+          </div>
+          <div class="contact-info">
+            <a href="tel:+573108917612">+57 310 891 7612</a>
+            <span class="small">Phone</span>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <div class="icon" aria-hidden="true">
+            <!-- location pin -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 11.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 11.5c0 6.25-9 11-9 11s-9-4.75-9-11A9 9 0 0 1 12 2.5a9 9 0 0 1 9 9z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="contact-info">
+            <div style="font-weight:700; font-size:14px; color:var(--gray-900)">Cali, Colombia</div>
+            <span class="small">Location</span>
+          </div>
+        </div>
+
+        <div class="qr-container">
+            <div class="qr-code">
+              <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://www.linkedin.com/in/andrestriana000" alt="QR code for LinkedIn" width="120" height="120">
+              <div>Scan for LinkedIn</div>
+            </div>
+            <div class="qr-code">
+              <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=BEGIN:VCARD%0AVERSION:3.0%0AN:Triana;Andrés;;;%0AFN:Andrés Triana%0AORG:Avanto%0ATITLE:Business Analyst%0ATEL;TYPE=CELL:+573108917612%0AEMAIL:andresm3000@gmail.com%0AURL:https://www.linkedin.com/in/andrestriana000%0AEND:VCARD" alt="QR code for VCard" width="120" height="120">
+              <div>Scan to Add Contact</div>
+            </div>
+        </div>
+      </aside>
+    </article>
+  </div>
+</body>
+</html>
